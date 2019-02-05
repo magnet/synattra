@@ -1,0 +1,9 @@
+[package]
+name = "synattra"
+version = "0.1.0"
+authors = ["Simon Chemouil <simon.chemouil@lambdacube.fr>"]
+edition = "2018"
+
+[dependencies]
+syn = {version= "0.15.26", features = ["full"] }
+proc-macro2 = "0.4.26"
