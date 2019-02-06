@@ -1,18 +1,22 @@
 use syn::parse::{Parse, ParseStream};
 use syn::Result;
 use crate::parse_ext::*;
-
+use auto_enums::auto_enum;
 /// Single or [MultipleA, MultipleB] values.
 pub enum MultipleVal<T: Parse> {
+    /// A Single value
     Single(T),
+    /// Multiple values
     Multiple(MultipleValArray<T>),
 }
 
 impl<T: Parse> MultipleVal<T> {
-    pub fn iter(&self) -> Vec<&T> {
+    /// Returns an iterator over the values
+    #[auto_enum(Iterator)]
+    pub fn iter(&self) -> impl Iterator<Item = &T> {
         match self {
-            MultipleVal::Single(val) => vec![val],
-            MultipleVal::Multiple(arr) => arr.values.iter().collect(),
+            MultipleVal::Single(val) => std::iter::once(val),
+            MultipleVal::Multiple(arr) => arr.values.iter(),
         }
     }
 }
@@ -25,8 +29,11 @@ impl<T: Parse> Parse for MultipleVal<T> {
     }
 }
 
+/// An array containing several values, [A, B, C]
 pub struct MultipleValArray<T: Parse> {
+    /// The bracket tocken '[' and ']'
     pub bracket_token: syn::token::Bracket,
+    /// The comma-separated values
     pub values: syn::punctuated::Punctuated<T, Token![,]>,
 }
 

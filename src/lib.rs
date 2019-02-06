@@ -10,8 +10,14 @@
 //! 
 //! By reusing Syn's design, Synattra parsers are very robust and when they compile, they usually work :-).
 
+#![deny(missing_docs)]
+#![deny(warnings)]
+
 #[macro_use]
 extern crate syn;
+
+#[macro_use]
+extern crate auto_enums;
 
 mod parse_attributes;
 mod kv_option;

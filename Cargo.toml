@@ -2,8 +2,17 @@
 name = "synattra"
 version = "0.1.0"
 authors = ["Simon Chemouil <simon.chemouil@lambdacube.fr>"]
+license = "Apache-2.0 OR MIT"
+readme = "README.md"
+keywords = ["parsing", "macro", "attribute"]
+repository = "https://github.com/magnet/synattra"
+description = """
+A Syn Attribute Parser Toolkit
+"""
+categories = ["parsing"]
 edition = "2018"
 
 [dependencies]
 syn = {version= "0.15.26", features = ["full"] }
 proc-macro2 = "0.4.26"
+auto_enums = "0.4"

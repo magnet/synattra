@@ -3,7 +3,9 @@ use syn::Result;
 
 /// An invocation path that may be `bar::foo` or `bar::foo!`
 pub struct InvokePath {
+    /// The path
     pub path: syn::Path,
+    /// The bang `!` token, if the invocation is a macro invocation.
     pub bang: Option<syn::Token![!]>,
 }
 
