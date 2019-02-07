@@ -1,4 +1,13 @@
 # Synattra
+[![License](https://img.shields.io/badge/license-MIT%2FApache--2.0-blue.svg)](
+https://github.com/magnet/synattra)
+[![Cargo](https://img.shields.io/crates/v/synattra.svg)](
+https://crates.io/crates/synattra)
+[![Documentation](https://docs.rs/synattra/badge.svg)](
+https://docs.rs/synattra)
+[![Rust 1.31+](https://img.shields.io/badge/rust-1.31+-lightgray.svg)](
+https://www.rust-lang.org)
+
 ## A Syn Attribute Parser Toolkit
 
 Synattra extends Syn and provides structures to easily parse custom attributes.
