@@ -1,4 +1,5 @@
 # Synattra
+[![Build Status](https://travis-ci.org/magnet/synattra.svg?branch=master)](https://travis-ci.org/magnet/synattra)
 [![License](https://img.shields.io/badge/license-MIT%2FApache--2.0-blue.svg)](
 https://github.com/magnet/synattra)
 [![Cargo](https://img.shields.io/crates/v/synattra.svg)](
