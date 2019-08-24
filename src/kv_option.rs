@@ -13,7 +13,7 @@ pub struct KVOption<K: syn::token::Token, V: Parse> {
 
 impl<K: Parse + syn::token::Token, V: Parse> KVOption<K, V> {
     /// Look ahead on the stream if the next token corresponds to the key.Default
-    /// 
+    ///
     /// This method does not consume the stream.
     pub fn peek(input: ParseStream) -> bool {
         K::peek(input.cursor())

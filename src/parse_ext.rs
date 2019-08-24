@@ -9,9 +9,9 @@ pub trait ParseStreamExt {
     fn try_parse<T: syn::parse::Parse>(&self) -> Result<T>;
 
     /// Try parsing a value and apply a function, but do not consume the stream if it failed
-    /// 
+    ///
     /// This method is useful when working with enums. See `parse_as` for an example.
-    /// 
+    ///
     /// This is a potentially costly method, better used when one knows the parsing will fail early.
     fn try_parse_as<T, R, F>(&self, f: F) -> Result<R>
     where
@@ -39,7 +39,7 @@ pub trait ParseStreamExt {
     /// pub type MeteredRegistryOption = KVOption<kw::registry, syn::Ident>;
     ///
     /// pub type MeteredRegistryExprOption = KVOption<kw::registry_expr, syn::Expr>;
-    /// 
+    ///
     /// pub enum MeteredOption {
     ///     Registry(MeteredRegistryOption),
     ///     RegistryExpr(MeteredRegistryExprOption),

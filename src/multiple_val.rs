@@ -1,7 +1,7 @@
-use syn::parse::{Parse, ParseStream};
-use syn::Result;
 use crate::parse_ext::*;
 use auto_enums::auto_enum;
+use syn::parse::{Parse, ParseStream};
+use syn::Result;
 /// Single or [MultipleA, MultipleB] values.
 pub enum MultipleVal<T: Parse> {
     /// A Single value

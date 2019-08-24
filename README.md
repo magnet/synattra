@@ -22,9 +22,15 @@ Finally Synattra provides some extra types, such as `InvokePath` which represent
 By reusing Syn's design, Synattra parsers are very robust and when they compile, they usually work :-).
 
 
+## Changelog
+
+* 0.2.0:
+  * Updated dependencies to use `syn`, `proc-macro2` and `quote` 1.0
+
+
 ## Required Rust version
 
-Synattra works on `Rust` stable.
+Synattra runs on `Rust` stable.
 
 
 ### Design

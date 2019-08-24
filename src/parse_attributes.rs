@@ -1,5 +1,5 @@
 use proc_macro2::TokenStream;
-use syn::parse::{Parse};
+use syn::parse::Parse;
 use syn::Result;
 
 /// A trait to parse attributes
@@ -8,7 +8,7 @@ pub trait ParseAttributes {
     type Type: Parse;
 
     /// Parse the attribute
-    /// 
+    ///
     /// The default implementation should work out of the box
     fn parse_attributes(attrs: TokenStream) -> Result<Self::Type> {
         Ok(syn::parse2(attrs)?)
