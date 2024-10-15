@@ -24,6 +24,8 @@ By reusing Syn's design, Synattra parsers are very robust and when they compile,
 
 ## Changelog
 
+* 0.3.0:
+  * Updated dependencies to use `syn` 2.0 and `auto_enums` 0.8
 * 0.2.0:
   * Updated dependencies to use `syn`, `proc-macro2` and `quote` 1.0
 

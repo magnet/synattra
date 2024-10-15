@@ -42,7 +42,7 @@ impl<T: Parse> Parse for MultipleValArray<T> {
         let content;
         Ok(MultipleValArray {
             bracket_token: bracketed!(content in input),
-            values: content.parse_terminated(T::parse)?,
+            values: content.call(syn::punctuated::Punctuated::parse_terminated)?,
         })
     }
 }

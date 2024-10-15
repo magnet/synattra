@@ -1,6 +1,6 @@
 [package]
 name = "synattra"
-version = "0.2.1"
+version = "0.3.0"
 authors = ["Simon Chemouil <simon.chemouil@lambdacube.fr>"]
 license = "Apache-2.0 OR MIT"
 readme = "README.md"
@@ -13,6 +13,6 @@ categories = ["parsing"]
 edition = "2018"
 
 [dependencies]
-syn = {version= "1.0", features = ["full"] }
-proc-macro2 = "1.0"
-auto_enums = "0.7"
+syn = {version= "2", features = ["full"] }
+proc-macro2 = "1"
+auto_enums = "0.8"
